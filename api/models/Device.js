@@ -11,12 +11,12 @@ module.exports = {
 
     codes: {
       collection: 'Code',
-      via: 'owner'
+      via: 'device'
     },
 
     os: {
       type: 'string',
-      enum: ['android', 'ios']
+      enum: ['Android', 'iOS']
     },
 
     manufacturer: {
@@ -29,6 +29,14 @@ module.exports = {
 
     deviceId: {
       type: 'string'
+    },
+
+    sensor: {
+      model: 'Sensor'
+    },
+
+    interlock: {
+      model: 'Code'
     }
 
   }

@@ -11,8 +11,8 @@ module.exports = {
 
   attributes: {
 
-    code: {
-      type: 'integer'
+    device: {
+      model: 'Device'
     },
 
     azimuth: {
