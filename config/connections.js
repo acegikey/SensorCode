@@ -76,11 +76,12 @@ module.exports.connections = {
   ***************************************************************************/
   somePostgresqlServer: {
     adapter: 'sails-postgresql',
-    host: 'YOUR_POSTGRES_SERVER_HOSTNAME_OR_IP_ADDRESS',
-    user: 'YOUR_POSTGRES_USER',
-    password: 'YOUR_POSTGRES_PASSWORD',
-    database: 'YOUR_POSTGRES_DB'
-  }
+    host: 'ec2-107-20-191-205.compute-1.amazonaws.com',
+    user: 'phbcshftfmedsm',
+    password: 'Sn-BAtNeDjIQCn9Uzbe_3YNJ8v',
+    database: 'decik9ucav0all',
+    port: '5432'
+  },
 
 
   /***************************************************************************
@@ -88,5 +89,20 @@ module.exports.connections = {
   * More adapters: https://github.com/balderdashy/sails                      *
   *                                                                          *
   ***************************************************************************/
+
+  someRedisServer: {
+    module   : 'sails-redis',
+    host     : 'pub-redis-19683.us-east-1-2.2.ec2.garantiadata.com',
+    port     : 19683,
+    options: {
+      auth_pass: 'iDQt8vSH3IUAfT4W',
+      parser: 'javascript',
+      return_buffers: false,
+      detect_buffers: false,
+      socket_nodelay: true,
+      no_ready_check: false,
+      enable_offline_queue: true
+    }
+  }
 
 };
