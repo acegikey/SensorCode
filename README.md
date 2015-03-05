@@ -90,6 +90,20 @@ Request
   "longitude": 0.0
 }
 ```
+```
+{
+  "device": 1,
+  "type": "poster",
+  "icon": "video",
+  "title": "Gril's Day - Darling",
+  "message": "https://www.youtube.com/watch?v=aS_0aPCARpg",
+  "azimuth": 0.0,
+  "pitch": 0.0,
+  "roll": 0.0,
+  "latitude": 0.0,
+  "longitude": 0.0
+}
+```
 
 ####GET
 ```
