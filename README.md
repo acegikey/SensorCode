@@ -15,13 +15,13 @@ Request
   "os": "Android",
   "manufacturer": "Samsung",
   "model": "SHV-E210K",
-  "deviceId": "352903053655881"
+  "uuid": "352903053655881"
 }
 ```
 
 ####GET
 ```
-http://sensecode.herokuapp.com/api/device/?where={"deviceId":"352903053655881"}
+http://sensecode.herokuapp.com/api/device/?where={"uuid":"352903053655881"}
 ```
 ```
 [
@@ -32,7 +32,7 @@ http://sensecode.herokuapp.com/api/device/?where={"deviceId":"352903053655881"}
    "os": "Android",
    "manufacturer": "Samsung",
    "model": "SHV-E210K",
-   "deviceId": "352903053655881"
+   "uuid": "352903053655881"
  }
 ]
 ```
@@ -64,7 +64,7 @@ Response
   "os": "Android",
   "manufacturer": "Samsung",
   "model": "SHV-E210K",
-  "deviceId": "352903053655881",
+  "uuid": "352903053655881",
   "sensor": 1,
   "interlock": 1
 }

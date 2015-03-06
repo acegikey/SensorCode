@@ -27,8 +27,10 @@ module.exports = {
       type: 'string'
     },
 
-    deviceId: {
-      type: 'string'
+    uuid: {
+      type: 'string',
+      required: true,
+      unique: true
     },
 
     sensor: {
