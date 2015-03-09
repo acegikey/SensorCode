@@ -13,6 +13,11 @@ module.exports = {
     	model: 'Device'
     },
 
+    searched: {
+      collection: 'Device',
+      via: 'searches'
+    },
+
     type: {
       type: 'string',
       enum: ['phone', 'vehicle', 'poster'],

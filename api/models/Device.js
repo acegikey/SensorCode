@@ -14,6 +14,12 @@ module.exports = {
       via: 'device'
     },
 
+    searches: {
+      collection: 'Code',
+      via: 'searched',
+      dominant: true
+    },
+
     os: {
       type: 'string',
       enum: ['Android', 'iOS']
