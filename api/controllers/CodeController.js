@@ -28,7 +28,7 @@ module.exports = {
 
 			var codeIds = new Array();
 			for (var i = 0; i < sensors.length; i++)
-				if (sensors[i] && sensors[i].device && sensors[i].interlock)
+				if (sensors[i] && sensors[i].device && sensors[i].device.interlock)
 					codeIds.push(sensors[i].device.interlock);
 
 			Code.find(codeIds).exec(function callback(err, codes) {
