@@ -27,7 +27,7 @@ module.exports = {
 
     icon: {
       type: 'string',
-      enum: ['account', 'content', 'image', 'video'],
+      enum: ['account', 'content', 'image', 'video', 'menu'],
       defaultsTo: 'content',
       required: true
     },
