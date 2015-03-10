@@ -16,7 +16,7 @@ module.exports = {
 
 		Sensor
 		.find({
-			azimuth: { '>': azimuth - 10, '<': azimuth + 10 },
+			// azimuth: { '>': azimuth - 10, '<': azimuth + 10 },
 			pitch: { '>': pitch - 5, '<': pitch + 5 },
 			roll: { '>': roll - 5, '<': roll + 5 },
 			latitude: { '>': latitude - 0.001, '<': latitude + 0.001 },
