@@ -38,13 +38,13 @@ module.exports = {
 
   afterCreate: function(values, next) {
     if (!values.device) {
-      Device.findOneBySensor(values.id).exec(function callback(err, device) {
+      Device.findOne({sensor:values.id}).exec(function callback(err, device) {
         if (err || !device)
           next();
 
-        values.device = device.id;
-        values.save();
-        next();
+        Sensor.update({id: values.id}, {device: device.id}).exec(function callback(err, sensor) {
+          next();
+        });
       });
     } else
       next();
