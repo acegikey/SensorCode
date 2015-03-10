@@ -144,6 +144,45 @@ http://sensecode.herokuapp.com/api/code/?where={"device":1}
 ]
 ```
 
+####GET
+```
+http://sensecode.herokuapp.com/api/code/search?azimuth=0&pitch=0&roll=0&latitude=0&longitude=0
+```
+```
+[
+  {
+    "id": 1,
+    "createdAt": "2013-10-18T01:22:56.000Z",
+    "updatedAt": "2013-10-18T01:22:56.000Z",
+    "device": 1,
+    "type": "phone",
+    "icon": "account",
+    "title": "Tae Hwan Kim",
+    "message": "Hello, this is Tae Hwan Kim. Nice to meet you :) Contact me via contact@thefinestartist.com or +82-10-7755-4400.",
+    "azimuth": 0.0,
+    "pitch": 0.0,
+    "roll": 0.0,
+    "latitude": 0.0,
+    "longitude": 0.0
+  },
+  {
+    "id": 2,
+    "createdAt": "2013-10-18T01:22:56.000Z",
+    "updatedAt": "2013-10-18T01:22:56.000Z",
+    "device": 1,
+    "type": "poster",
+    "icon": "video",
+    "title": "Gril's Day - Darling",
+    "message": "https://www.youtube.com/watch?v=aS_0aPCARpg",
+    "azimuth": 0.0,
+    "pitch": 0.0,
+    "roll": 0.0,
+    "latitude": 0.0,
+    "longitude": 0.0
+  }
+]
+```
+
 ###Sensor
 
 ####POST
