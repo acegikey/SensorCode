@@ -47,5 +47,17 @@ module.exports = {
       model: 'Code'
     }
 
+  },
+
+  afterCreate: function(values, next) {
+
+    Sensor
+    .update({id: values.sensor}, {device: values.id})
+    .exec(function callback(err, sensor) {});
+
+    Code
+    .update({id: values.interlock}, {device: values.id})
+    .exec(function callback(err, code) {});
+
   }
 };

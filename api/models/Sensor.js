@@ -34,19 +34,5 @@ module.exports = {
     longitude: {
       type: 'float'
     }
-  },
-
-  afterCreate: function(values, next) {
-    if (!values.device) {
-      Device.findOne({sensor:values.id}).exec(function callback(err, device) {
-        if (err || !device)
-          next();
-
-        Sensor.update({id: values.id}, {device: device.id}).exec(function callback(err, sensor) {
-          next();
-        });
-      });
-    } else
-      next();
   }
 };

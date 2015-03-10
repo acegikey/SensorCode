@@ -64,19 +64,5 @@ module.exports = {
       type: 'float'
     }
 
-  },
-
-  afterCreate: function(values, next) {
-    if (!values.device) {
-      Device.findOne({interlock:values.id}).exec(function callback(err, device) {
-        if (err || !device)
-          next();
-
-        Code.update({id: values.id}, {device: device.id}).exec(function callback(err, code) {
-          next();
-        });
-      });
-    } else
-      next();
   }
 };
