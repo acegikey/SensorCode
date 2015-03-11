@@ -19,8 +19,8 @@ module.exports = {
 			// azimuth: { '>': azimuth - 50, '<': azimuth + 50 },
 			pitch: { '>': pitch - 5, '<': pitch + 5 },
 			roll: { '>': roll - 5, '<': roll + 5 },
-			latitude: { '>': latitude - 0.001, '<': latitude + 0.001 },
-			longitude: { '>': longitude - 0.001, '<': longitude + 0.001 }})
+			latitude: { '>': latitude - 0.01, '<': latitude + 0.01 },
+			longitude: { '>': longitude - 0.01, '<': longitude + 0.01 }})
 		.populate('device')
 		.exec(function callback(err, sensors) {
 			if (err || !sensors)
