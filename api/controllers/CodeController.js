@@ -5,6 +5,12 @@
  * @help        :: See http://links.sailsjs.org/docs/controllers
  */
 
+// azimutj	=> -180 ~ 0 ~ 180
+// roll 		=> -180 ~ 0 ~ 180
+// pitch 		=> 0 ~ -90 ~ 0 ~ 90 ~0
+
+// Mirroring => No Azimuth
+
 module.exports = {
 
 	search: function(req, res) {
