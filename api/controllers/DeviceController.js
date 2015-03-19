@@ -12,10 +12,17 @@ module.exports = {
   push: function(req, res) {
 		var title = parseFloat(req.param('title'));
 		var message = parseFloat(req.param('message'));
-		var notification_key = parseFloat(req.param('notification_key'));
+		var device_id = parseFloat(req.param('device_id'));
 
-    push.send(notification_key, title, message);
-    return res.send(200);
+    Device
+    .findOneById(device_id)
+		.exec(function callback(err, device) {
+			if (err || !device)
+        return res.send(404);
+
+      push.send(device.notification_key, title, message);
+      return res.send(200);
+    });
   }
 
 };

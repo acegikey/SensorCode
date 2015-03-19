@@ -78,7 +78,7 @@ http://sensecode.herokuapp.com/api/device/push
 Request
 ```
 {
-  "notification_key": 1,
+  "device_id": 1,
   "title": "Just want to say hello",
   "message": "This is Tae Hwan Kim, 25 years old full-stack developer, kind and cool. Please contact me if you have any interests in me +82-10-7755-4400"
 }
