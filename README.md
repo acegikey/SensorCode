@@ -33,7 +33,7 @@ http://sensecode.herokuapp.com/api/device/?where={"uuid":"352903053655881"}
    "manufacturer": "Samsung",
    "model": "SHV-E210K",
    "uuid": "352903053655881",
-   "notification_key": "APA91bEc6mFJKb7plsdxGoFXFS5Mw46unBZ_Trb8D_tyFgq1xvhqOJFcm2oy_uQYYIVJvMw0_pASrUNFxCceEuAYtNrrbhFvaSihoUonWJAKhnBcSLi5CbVZ9NiCe-hO9718mZPMU8yV"
+   "notificationKey": "APA91bEc6mFJKb7plsdxGoFXFS5Mw46unBZ_Trb8D_tyFgq1xvhqOJFcm2oy_uQYYIVJvMw0_pASrUNFxCceEuAYtNrrbhFvaSihoUonWJAKhnBcSLi5CbVZ9NiCe-hO9718mZPMU8yV"
  }
 ]
 ```
@@ -66,7 +66,7 @@ Response
   "manufacturer": "Samsung",
   "model": "SHV-E210K",
   "uuid": "352903053655881",
-  "notification_key": "APA91bEc6mFJKb7plsdxGoFXFS5Mw46unBZ_Trb8D_tyFgq1xvhqOJFcm2oy_uQYYIVJvMw0_pASrUNFxCceEuAYtNrrbhFvaSihoUonWJAKhnBcSLi5CbVZ9NiCe-hO9718mZPMU8yV",
+  "notificationKey": "APA91bEc6mFJKb7plsdxGoFXFS5Mw46unBZ_Trb8D_tyFgq1xvhqOJFcm2oy_uQYYIVJvMw0_pASrUNFxCceEuAYtNrrbhFvaSihoUonWJAKhnBcSLi5CbVZ9NiCe-hO9718mZPMU8yV",
   "sensor": 1,
   "interlock": 1
 }

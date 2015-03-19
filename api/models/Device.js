@@ -39,7 +39,7 @@ module.exports = {
       unique: true
     },
 
-    notification_key: {
+    notificationKey: {
       type: 'string'
     },
 
