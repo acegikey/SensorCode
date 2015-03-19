@@ -39,21 +39,12 @@ http://sensecode.herokuapp.com/api/device/?where={"uuid":"352903053655881"}
 ```
 
 ####PUT
-http://sensecode.herokuapp.com/api/device/1
+http://sensecode.herokuapp.com/api/device/update
 
-Request
+Params
 ```
-{
-  "sensor": 1,
-  "interlock": 1
-}
-```
-
-Request
-```
-{
-  "interlock": 2
-}
+deviceId
+notificationKey
 ```
 
 Response
