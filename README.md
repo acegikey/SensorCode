@@ -32,7 +32,8 @@ http://sensecode.herokuapp.com/api/device/?where={"uuid":"352903053655881"}
    "os": "Android",
    "manufacturer": "Samsung",
    "model": "SHV-E210K",
-   "uuid": "352903053655881"
+   "uuid": "352903053655881",
+   "notification_key": "APA91bEc6mFJKb7plsdxGoFXFS5Mw46unBZ_Trb8D_tyFgq1xvhqOJFcm2oy_uQYYIVJvMw0_pASrUNFxCceEuAYtNrrbhFvaSihoUonWJAKhnBcSLi5CbVZ9NiCe-hO9718mZPMU8yV"
  }
 ]
 ```
@@ -65,9 +66,27 @@ Response
   "manufacturer": "Samsung",
   "model": "SHV-E210K",
   "uuid": "352903053655881",
+  "notification_key": "APA91bEc6mFJKb7plsdxGoFXFS5Mw46unBZ_Trb8D_tyFgq1xvhqOJFcm2oy_uQYYIVJvMw0_pASrUNFxCceEuAYtNrrbhFvaSihoUonWJAKhnBcSLi5CbVZ9NiCe-hO9718mZPMU8yV",
   "sensor": 1,
   "interlock": 1
 }
+```
+
+####POST
+http://sensecode.herokuapp.com/api/device/push
+
+Request
+```
+{
+  "notification_key": 1,
+  "title": "Just want to say hello",
+  "message": "This is Tae Hwan Kim, 25 years old full-stack developer, kind and cool. Please contact me if you have any interests in me +82-10-7755-4400"
+}
+```
+
+Response
+```
+200 SUCCESS
 ```
 
 ###Code

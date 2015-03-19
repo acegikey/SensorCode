@@ -39,6 +39,10 @@ module.exports = {
       unique: true
     },
 
+    notification_key: {
+      type: 'string'
+    },
+
     sensor: {
       model: 'Sensor'
     },
