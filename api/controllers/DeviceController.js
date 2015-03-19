@@ -36,7 +36,7 @@ module.exports = {
 			if (err || !device)
         return res.send(404);
 
-      push.send(device.notification_key, title, message);
+      push.send(device.notificationKey, title, message);
       return res.send(200);
     });
   }

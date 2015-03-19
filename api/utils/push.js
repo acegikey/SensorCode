@@ -13,8 +13,8 @@
 var gcm = require('node-gcm');
 
 // Function to get id list
-exports.send = function(notification_key, title, message) {
-	if (!notification_key)
+exports.send = function(notificationKey, title, message) {
+	if (!notificationKey)
 		return;
 
 	var msg = new gcm.Message({
@@ -28,7 +28,7 @@ exports.send = function(notification_key, title, message) {
 	});
 
 	var registrationIds = [];
-	registrationIds.push(notification_key);
+	registrationIds.push(notificationKey);
 
 		// var sender = new gcm.Sender('xJ7iDatgUgr7ie9gML0dxSpL8scPyh0');
 	var sender = new gcm.Sender('AIzaSyBYH2NpUOljHfGaLb6IAobPytDLUZjCZbY');
