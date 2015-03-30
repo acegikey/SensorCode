@@ -26,9 +26,9 @@ module.exports = {
   },
 
   push: function(req, res) {
-		var title = parseFloat(req.param('title'));
-		var message = parseFloat(req.param('message'));
-		var device_id = parseFloat(req.param('device_id'));
+		var title = req.param('title');
+		var message = req.param('message');
+		var device_id = req.param('device_id');
 
     Device
     .findOneById(device_id)

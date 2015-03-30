@@ -29,10 +29,13 @@ exports.send = function(notificationKey, title, message) {
 
 	var registrationIds = [];
 	registrationIds.push(notificationKey);
+	console.log(notificationKey);
+	console.log(title);
+	console.log(message);
 
-	var sender = new gcm.Sender('AIzaSyDTAygXcz2BtEzqRvCIhGqoAlB05q8yRp4');
-	sender.send(msg, registrationIds, 4, function (err, result) {
-		if (err)  console.log(err);
+	var sender = new gcm.Sender('AIzaSyByrjmrKWgg1IvZhFZspzYVMykKHaGzK0o');
+	sender.send(msg, registrationIds, 1, function (err, result) {
+		if (err)  console.log(err + " : " + result);
 		else      console.log("Android notification has been sent to " + device.id + " (" + device.model + ")");
 	});
 }
