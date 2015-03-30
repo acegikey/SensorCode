@@ -13,25 +13,25 @@
 var gcm = require('node-gcm');
 
 // Function to get id list
-exports.send = function(notificationKey, title, message) {
+exports.send = function(notificationKey, title, message, code) {
 	if (!notificationKey)
 		return;
 
+	var codeJson = JSON.stringify(code);
 	var msg = new gcm.Message({
 	    collapseKey: 'code',
 	    delayWhileIdle: false,
 	    timeToLive: 4,
 	    data: {
 	    	title: title,
-	      message: message
+	      message: message,
+				code: codeJson
 	    }
 	});
 
 	var registrationIds = [];
 	registrationIds.push(notificationKey);
-	console.log(notificationKey);
-	console.log(title);
-	console.log(message);
+	console.log(codeJson);
 
 	var sender = new gcm.Sender('AIzaSyByrjmrKWgg1IvZhFZspzYVMykKHaGzK0o');
 	sender.send(msg, registrationIds, 1, function (err, result) {

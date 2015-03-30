@@ -28,16 +28,24 @@ module.exports = {
   push: function(req, res) {
 		var title = req.param('title');
 		var message = req.param('message');
-		var device_id = req.param('device_id');
+		var to = req.param('to');
+		var from = req.param('from');
 
     Device
-    .findOneById(device_id)
+    .findOneById(to)
 		.exec(function callback(err, device) {
 			if (err || !device)
         return res.send(404);
 
-      push.send(device.notificationKey, title, message);
-      return res.send(200);
+      Code
+      .findOne({device : from})
+      .exec(function callback(err, code) {
+  			if (err || !code)
+          return res.send(404);
+
+        push.send(device.notificationKey, title, message, code);
+        return res.send(200);
+      });
     });
   }
 

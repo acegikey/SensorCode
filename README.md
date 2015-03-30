@@ -69,7 +69,8 @@ http://sensecode.herokuapp.com/api/device/push
 Request
 ```
 {
-  "device_id": 1,
+  "to": 1,
+  "from": 2,
   "title": "Just want to say hello",
   "message": "This is Tae Hwan Kim, 25 years old full-stack developer, kind and cool. Please contact me if you have any interests in me +82-10-7755-4400"
 }
@@ -78,6 +79,15 @@ Request
 Response
 ```
 200 SUCCESS
+```
+
+Push
+```
+{
+  "title": "Just want to say hello",
+  "message": "This is Tae Hwan Kim, 25 years old full-stack developer, kind and cool. Please contact me if you have any interests in me +82-10-7755-4400",
+  "code": "{"device":2,"type":"phone","icon":"account","title":"samsung","message":"SHV-E210K","azimuth":-111.617,"pitch":-0.727216,"roll":0.327586,"latitude":0,"longitude":0,"id":2,"createdAt":"2015-03-30T15:39:37.000Z","updatedAt":"2015-03-30T15:39:37.000Z"}"
+}
 ```
 
 ###Code
