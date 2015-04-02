@@ -32,7 +32,7 @@ exports.send = function(notificationKey, message, code) {
 	registrationIds.push(notificationKey);
 	console.log(codeJson);
 
-	var sender = new gcm.Sender('AIzaSyBQDL42aTOzDE8egVulzzb3ovgCgOyWOPg');
+	var sender = new gcm.Sender('AIzaSyByrjmrKWgg1IvZhFZspzYVMykKHaGzK0o');
 	sender.send(msg, registrationIds, 1, function (err, result) {
 		if (err)  console.log(err + " : " + result);
 		else      console.log("Android notification has been sent to " + device.id + " (" + device.model + ")");
