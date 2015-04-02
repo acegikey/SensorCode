@@ -26,7 +26,6 @@ module.exports = {
   },
 
   push: function(req, res) {
-		var title = req.param('title');
 		var message = req.param('message');
 		var to = req.param('to');
 		var from = req.param('from');
@@ -37,14 +36,21 @@ module.exports = {
 			if (err || !device)
         return res.send(404);
 
-      Code
-      .findOne({device : from})
-      .exec(function callback(err, code) {
-  			if (err || !code)
+      Device
+      .findOneById(from)
+      .exec(function callback(err, deviceCode) {
+  			if (err || !deviceCode)
           return res.send(404);
 
-        push.send(device.notificationKey, title, message, code);
-        return res.send(200);
+        Code
+        .findOneById(deviceCode.interlock)
+        .exec(function callback(err, code) {
+    			if (err || !code)
+            return res.send(404);
+
+          push.send(device.notificationKey, message, code);
+          return res.send(200);
+        });
       });
     });
   }

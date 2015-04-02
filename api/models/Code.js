@@ -44,6 +44,27 @@ module.exports = {
       required: true
     },
 
+    image: {
+      type: 'string'
+    },
+
+    birthday: {
+      type: 'string'
+    },
+
+    job: {
+      type: 'string'
+    },
+
+    education: {
+      type: 'string'
+    },
+
+    gender: {
+      type: 'string',
+      enum: ['man', 'woman']
+    },
+
     azimuth: {
       type: 'float'
     },

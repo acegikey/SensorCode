@@ -5,15 +5,15 @@
  * @description	:: Contains logic for notification JSON handling.
  *
  *  {
- *      "title" : "title",
  *      "message": "message"
+ *			"code": "code json string"
  *  }
  */
 
 var gcm = require('node-gcm');
 
 // Function to get id list
-exports.send = function(notificationKey, title, message, code) {
+exports.send = function(notificationKey, message, code) {
 	if (!notificationKey)
 		return;
 
@@ -23,7 +23,6 @@ exports.send = function(notificationKey, title, message, code) {
 	    delayWhileIdle: false,
 	    timeToLive: 4,
 	    data: {
-	    	title: title,
 	      message: message,
 				code: codeJson
 	    }
@@ -33,7 +32,7 @@ exports.send = function(notificationKey, title, message, code) {
 	registrationIds.push(notificationKey);
 	console.log(codeJson);
 
-	var sender = new gcm.Sender('AIzaSyByrjmrKWgg1IvZhFZspzYVMykKHaGzK0o');
+	var sender = new gcm.Sender('AIzaSyBQDL42aTOzDE8egVulzzb3ovgCgOyWOPg');
 	sender.send(msg, registrationIds, 1, function (err, result) {
 		if (err)  console.log(err + " : " + result);
 		else      console.log("Android notification has been sent to " + device.id + " (" + device.model + ")");
