@@ -41,8 +41,8 @@ module.exports = {
 			Code
 			.find({
 				// azimuth: { '>': azimuth - 50, '<': azimuth + 50 },
-				pitch: { '>': pitch - 10, '<': pitch + 10 },
-				roll: { '>': roll - 20, '<': roll + 20 },
+				pitch: { '>': pitch - 20, '<': pitch + 20 },
+				roll: { '>': roll - 30, '<': roll + 30 },
 				// latitude: { '>': latitude - 0.01, '<': latitude + 0.01 },
 				// longitude: { '>': longitude - 0.01, '<': longitude + 0.01 }
 			})
