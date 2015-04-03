@@ -27,7 +27,7 @@ module.exports = {
 			roll: { '>': roll - 10, '<': roll + 10 },
 			// latitude: { '>': latitude - 0.01, '<': latitude + 0.01 },
 			// longitude: { '>': longitude - 0.01, '<': longitude + 0.01 }
-			})
+		})
 		.populate('device')
 		.exec(function callback(err, sensors) {
 			if (err || !sensors)
@@ -38,11 +38,25 @@ module.exports = {
 				if (sensors[i] && sensors[i].device && sensors[i].device.interlock)
 					codeIds.push(sensors[i].device.interlock);
 
-			Code.find(codeIds).exec(function callback(err, codes) {
-				if (err || !codes)
-					return res.send(new Array());
+			Code
+			.find({
+				// azimuth: { '>': azimuth - 50, '<': azimuth + 50 },
+				pitch: { '>': pitch - 10, '<': pitch + 10 },
+				roll: { '>': roll - 10, '<': roll + 10 },
+				// latitude: { '>': latitude - 0.01, '<': latitude + 0.01 },
+				// longitude: { '>': longitude - 0.01, '<': longitude + 0.01 }
+			})
+			.exec(function callback(err, searched) {
+				if (searched)
+					for (var i = 0; i < searched.length; i++)
+							codeIds.push(searched[i].id);
 
-				return res.send(codes);
+				Code.find(codeIds).exec(function callback(err, codes) {
+					if (err || !codes)
+						return res.send(new Array());
+
+					return res.send(codes);
+				});
 			});
 		});
 	}
